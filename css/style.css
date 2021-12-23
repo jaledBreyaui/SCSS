@@ -1,0 +1,207 @@
+* {
+  margin: 0%;
+  padding: 0%; }
+
+@media screen and (max-width: 700px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 20% 70% 5%;
+    grid-template-areas: "header" "navegacion"   "main" "footer";
+    height: 300vh; }
+  .logo {
+    grid-area: header;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; }
+  .ancla {
+    height: 100%;
+    width: 100%;
+    background-image: url(../assets/md-logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  nav {
+    grid-area: navegacion; }
+    nav ul {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background-color: black; }
+      nav ul li {
+        height: 25%;
+        width: 100%;
+        border-top: 2px solid goldenrod;
+        border-bottom: 2px solid goldenrod;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        nav ul li a {
+          text-decoration: none;
+          color: goldenrod; }
+  .lineup {
+    display: none; }
+  .main__index {
+    grid-area: main;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3%; }
+  .texto {
+    text-align: justify; }
+  .mainUno, .mainDos, .mainCuatro, .mainTres {
+    display: flex;
+    flex-direction: column;
+    height: 21%; }
+    .mainUno img, .mainDos img, .mainCuatro img, .mainTres img {
+      height: 350px;
+      width: 400px; }
+    .mainUno p, .mainDos p, .mainCuatro p, .mainTres p {
+      display: flex;
+      justify-content: center;
+      color: goldenrod;
+      font-size: 20px; }
+  footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 45% 45%;
+    grid-template-areas: "gibson megadeth redes" "marshall meagdeth redes";
+    background-color: black;
+    row-gap: 3px;
+    resize: none; }
+    footer div {
+      height: 100%;
+      width: 100%; }
+      footer div div {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+  .megadethpadre {
+    grid-area: megadeth; }
+    .megadethpadre div img {
+      height: 50px;
+      width: 150px; }
+  .gibsonpadre {
+    grid-area: gibson; }
+    .gibsonpadre div img {
+      height: 50px;
+      width: 150px; }
+  .marshallpadre {
+    grid-area: marshall; }
+    .marshallpadre div img {
+      height: 50px;
+      width: 150px; }
+  .redespadre {
+    grid-area: redes; }
+    .redespadre div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: goldenrod; } }
+
+@media screen and (min-width: 700px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 3% 20% 72% 5%;
+    grid-template-areas: "logo navegacion" "header header" "main main" "footer footer";
+    width: 100%; }
+  .logo {
+    grid-area: logo;
+    height: 100%;
+    width: 100%; }
+  .ancla {
+    height: 100%;
+    width: 100%;
+    background-image: url(../assets/md-logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .lineup {
+    grid-area: header;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .lineup img {
+      max-height: 100%;
+      width: auto; }
+  .navegacion {
+    grid-area: navegacion;
+    background-color: black; }
+    .navegacion ul {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly; }
+      .navegacion ul li {
+        list-style-type: none; }
+        .navegacion ul li a {
+          text-decoration: none;
+          color: goldenrod; }
+  .main__index {
+    grid-area: main;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+  .mainUno, .mainDos, .mainTres, .mainCuatro {
+    display: flex;
+    flex-direction: column;
+    height: 24%;
+    align-items: center;
+    justify-content: center; }
+    .mainUno p, .mainDos p, .mainTres p, .mainCuatro p {
+      color: goldenrod; }
+  .img__main {
+    height: 350px;
+    width: 500px; }
+  footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 45% 45%;
+    grid-template-areas: "gibson megadeth redes" "marshall meagdeth redes";
+    background-color: black;
+    row-gap: 3px;
+    resize: none; }
+    footer div {
+      height: 100%;
+      width: 100%; }
+      footer div div {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+  .megadethpadre {
+    grid-area: megadeth; }
+    .megadethpadre div img {
+      height: 50px;
+      width: 150px; }
+  .gibsonpadre {
+    grid-area: gibson; }
+    .gibsonpadre div img {
+      height: 50px;
+      width: 150px; }
+  .marshallpadre {
+    grid-area: marshall; }
+    .marshallpadre div img {
+      height: 50px;
+      width: 150px; }
+  .redespadre {
+    grid-area: redes; }
+    .redespadre div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: goldenrod; } }
