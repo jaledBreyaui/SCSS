@@ -3,12 +3,12 @@
   padding: 0%; }
 
 @media screen and (max-width: 700px) {
-  .contenedor {
+  .contenedor, .contenedor-banda {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 5% 20% 70% 5%;
     grid-template-areas: "header" "navegacion"   "main" "footer";
-    height: 300vh; }
+    height: 100%; }
   .logo {
     grid-area: header;
     background-color: black;
@@ -18,11 +18,10 @@
     height: 100%; }
   .ancla {
     height: 100%;
-    width: 100%;
-    background-image: url(../assets/md-logo.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat; }
+    width: 100%; }
+    .ancla img {
+      width: 100%;
+      height: 92%; }
   nav {
     grid-area: navegacion; }
     nav ul {
@@ -67,6 +66,39 @@
       justify-content: center;
       color: goldenrod;
       font-size: 20px; }
+  .contenedor-banda {
+    height: 350vh; }
+  .labanda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: gray;
+    padding: 2%;
+    grid-area: main; }
+  .boxUno, .boxDos, .boxTres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 350vh; }
+    .boxUno h2, .boxDos h2, .boxTres h2 {
+      font-size: 20px;
+      color: goldenrod; }
+    .boxUno p, .boxDos p, .boxTres p {
+      text-align: justify; }
+    .boxUno div, .boxDos div, .boxTres div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%; }
+      .boxUno div img, .boxDos div img, .boxTres div img {
+        height: 90%;
+        width: 90%; }
+  .boxDos p {
+    margin-bottom: 10px; }
   footer {
     grid-area: footer;
     display: grid;
@@ -110,21 +142,26 @@
 @media screen and (min-width: 700px) {
   .contenedor {
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 30% 70%;
     grid-template-rows: 3% 20% 72% 5%;
     grid-template-areas: "logo navegacion" "header header" "main main" "footer footer";
-    width: 100%; }
+    width: 100%;
+    row-gap: 20px;
+    background-color: black; }
   .logo {
     grid-area: logo;
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   .ancla {
     height: 100%;
-    width: 100%;
-    background-image: url(../assets/md-logo.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat; }
+    width: 100%; }
+    .ancla img {
+      width: 95%;
+      height: 100%; }
   .lineup {
     grid-area: header;
     background-color: black;
@@ -132,8 +169,8 @@
     justify-content: center;
     align-items: center; }
     .lineup img {
-      max-height: 100%;
-      width: auto; }
+      height: 100%;
+      width: 90%; }
   .navegacion {
     grid-area: navegacion;
     background-color: black; }
@@ -155,6 +192,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around; }
+  .texto {
+    padding: 20px;
+    text-align: justify; }
   .mainUno, .mainDos, .mainTres, .mainCuatro {
     display: flex;
     flex-direction: column;
@@ -162,10 +202,47 @@
     align-items: center;
     justify-content: center; }
     .mainUno p, .mainDos p, .mainTres p, .mainCuatro p {
-      color: goldenrod; }
+      color: goldenrod;
+      font-size: 30px; }
   .img__main {
-    height: 350px;
-    width: 500px; }
+    height: 310px;
+    width: 480px; }
+  .contenedor-banda {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 3% 20% 71% 6%;
+    grid-template-areas: "logo navegacion" "main main" "main main" "footer footer";
+    width: 100%;
+    row-gap: 5px;
+    background-color: black;
+    height: 300vh; }
+  .labanda {
+    grid-area: main;
+    background-color: gray;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+  .boxTres, .boxDos, .boxUno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    height: 33%; }
+    .boxTres h2, .boxDos h2, .boxUno h2 {
+      color: goldenrod;
+      font-size: 30px; }
+    .boxTres div p, .boxDos div p, .boxUno div p {
+      text-align: justify;
+      font-size: 20px; }
+    .boxTres div img, .boxDos div img, .boxUno div img {
+      height: 350px;
+      width: 600px; }
   footer {
     grid-area: footer;
     display: grid;
@@ -173,8 +250,7 @@
     grid-template-rows: 45% 45%;
     grid-template-areas: "gibson megadeth redes" "marshall meagdeth redes";
     background-color: black;
-    row-gap: 3px;
-    resize: none; }
+    row-gap: 3px; }
     footer div {
       height: 100%;
       width: 100%; }
@@ -183,10 +259,13 @@
         justify-content: center;
         align-items: center; }
   .megadethpadre {
-    grid-area: megadeth; }
+    grid-area: megadeth;
+    position: relative;
+    top: 20px;
+    height: 100%; }
     .megadethpadre div img {
-      height: 50px;
-      width: 150px; }
+      height: 80px;
+      width: 300px; }
   .gibsonpadre {
     grid-area: gibson; }
     .gibsonpadre div img {
@@ -205,3 +284,30 @@
       justify-content: center;
       align-items: center;
       color: goldenrod; } }
+
+@media screen and (min-width: 1200px) {
+  .lineup img {
+    max-width: 1100px;
+    height: 100%; }
+  .ancla {
+    height: 100%;
+    width: 100%; }
+    .ancla img {
+      width: 90%;
+      height: 90%; }
+  .boxTres, .boxDos, .boxUno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    height: 33%; }
+    .boxTres h2, .boxDos h2, .boxUno h2 {
+      color: goldenrod;
+      font-size: 35px; }
+    .boxTres div p, .boxDos div p, .boxUno div p {
+      text-align: justify;
+      font-size: 25px; }
+    .boxTres div img, .boxDos div img, .boxUno div img {
+      height: 450px;
+      width: 700px; } }

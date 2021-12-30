@@ -1,11 +1,17 @@
 *{
     margin:0%;
     padding:0%;   
+}
 
+@mixin centrado  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;    
 }
 
 @media screen and (max-width:700px){
-    .contenedor{
+    .contenedor, .contenedor-banda{
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 5% 20% 70% 5%;
@@ -13,7 +19,7 @@
         "navegacion"  
         "main"
         "footer";
-        height: 300vh;                
+        height: 100%;
     }
 
     .logo{
@@ -28,20 +34,17 @@
     .ancla{
         height: 100%;
         width: 100%;
-        background-image: url(../assets/md-logo.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
+            img{
+                width: 100%;
+                height: 92%;
+            }
     }   
 
     nav {
         grid-area: navegacion;
         ul{
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
+            @include centrado();
             background-color: black;
 
             li{
@@ -68,10 +71,7 @@
     .main__index{
         grid-area: main;
         background-color: gray;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+        @include centrado();
         padding: 3%;
     }
     .texto{
@@ -94,6 +94,48 @@
             font-size: 20px;
         }
     }
+
+    .contenedor-banda{
+        height: 350vh;
+    }
+
+    .labanda{
+        @include centrado();
+        background-color: gray;
+        padding: 2%; 
+        grid-area: main
+    }
+
+    .boxUno, .boxDos, .boxTres {
+        @include centrado();
+        height: 350vh;
+
+        h2{
+            font-size: 20px;
+            color: goldenrod;
+        }
+        p{
+            text-align: justify;
+        }
+
+        div{
+            @include centrado();
+            width: 100%;
+            height: 100%;
+            img{
+                height: 90%;
+                width: 90%;
+            }
+        }
+    }
+
+    .boxDos{
+        p{
+            margin-bottom: 10px;
+        }
+    }
+    
+
 
     footer{
         grid-area: footer;
@@ -161,27 +203,35 @@
 @media screen and (min-width:700px){    
     .contenedor{
         display:grid;
-        grid-template-columns: 25% 75%;
+        grid-template-columns: 30% 70%;
         grid-template-rows: 3% 20% 72% 5%;
         grid-template-areas: "logo navegacion"
                             "header header"
                             "main main"
                             "footer footer";
         width: 100%;
+        row-gap: 20px;
+        background-color: black;
     }
     
     .logo{
         grid-area: logo;
         height: 100%;
         width: 100%;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+    
     .ancla {
         height: 100%;
         width: 100%;
-        background-image: url(../assets/md-logo.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
+            img{
+                width: 95%;
+                height: 100%;
+            }
     }
     
     .lineup{
@@ -191,8 +241,8 @@
         justify-content: center;
         align-items: center;
         img {
-            max-height: 100%;
-            width:auto;
+            height: 100%;
+            width: 90%;
         }
     }
     
@@ -224,6 +274,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        
+    }
+
+    .texto{
+        padding: 20px;
+        text-align: justify;
     }
     
     .mainUno, .mainDos, .mainTres, .mainCuatro{
@@ -232,19 +288,66 @@
         height: 24%;
         align-items: center;
         justify-content: center;
-        
             p{
                 color: goldenrod;
+                font-size: 30px;
             }
+            
         
     }
 
     .img__main{
-        height: 350px;
-        width: 500px;
+        height: 310px;
+        width: 480px;
+    }
+
+    .contenedor-banda{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 3% 20% 71% 6%;
+        grid-template-areas: "logo navegacion"
+                            "main main"
+                            "main main"
+                            "footer footer";
+        width: 100%;
+        row-gap: 5px;
+        background-color: black;
+        height: 300vh;
+    }
+
+    .labanda{
+        grid-area: main;
+        background-color: gray;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        @include centrado();
+    }
+
+    .boxTres, .boxDos, .boxUno{
+        @include centrado();
+        justify-content: space-around;
+        height: 33%;         
+        h2{
+            color: goldenrod;
+            font-size: 30px;
+        }
+
+        div{
+            p{
+                text-align: justify;
+                font-size: 20px;
+            }
+
+            img{
+                height: 350px;
+                width: 600px;
+            }
+        }
     }
     
-    
+
     footer{
         grid-area: footer;
         display: grid;
@@ -264,15 +367,18 @@
             }
             
         }
-        resize: none;
+        
     }
     
     .megadethpadre{
         grid-area: megadeth;
+        position: relative;
+        top: 20px;
+        height: 100%;
         div{
             img{
-                height: 50px;
-                width: 150px;   
+                height: 80px;
+                width: 300px;   
             }
         }
     }
@@ -306,4 +412,45 @@
             color: goldenrod;
         }
     }
+}
+
+@media screen and (min-width:1200px){
+    .lineup {
+        img{
+            max-width: 1100px;
+            height: 100%;
+        }
+    }
+
+    .ancla {
+        height: 100%;
+        width: 100%;
+            img{
+                width: 90%;
+                height: 90%;
+            }
+    }
+
+    .boxTres, .boxDos, .boxUno{
+        @include centrado();
+        justify-content: space-around;
+        height: 33%;         
+        h2{
+            color: goldenrod;
+            font-size: 35px;
+        }
+
+        div{
+            p{
+                text-align: justify;
+                font-size: 25px;
+            }
+
+            img{
+                height: 450px;
+                width: 700px;
+            }
+        }
+    }
+
 }
