@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>Suscribite!</title>
     <meta name="keywords" content="Megadeth, Mustaine, Dave Mustaine,
@@ -15,71 +17,92 @@
 </head>
 
 <body>
-    <div class="contenedor-suscripcion">
-        <header>
+    <header class="container-fluid row index__header">
+        <div class="logo col-sm-12 col-md-2">
             <a href="../index.html" class="ancla">
-                <div class="logoFoto"></div>
+                <img src="../assets/md-logo.png" alt="" class="img-fluid">
             </a>
-        </header>
-        <nav class="navegacion">
+        </div>
+        <nav class="navegacion col-sm-12 col-md-10">
             <ul class="navegador">
-                <li class="li"><a href="./labanda.html">LA BANDA</a></li>
-                <li class="li"><a href="./discografia.html">DISCOGRAFÍA </a></li>
-                <li class="li"><a href="./novedades.html">NOVEDADES</a></li>
-                <li class="li"><a href="./suscribite.html">SUSCRIBITE</a></li>
+                <li class="li">
+                    <a href="../pages/labanda.html">LA BANDA</a>
+                </li>
+                <li class="li">
+                    <a href="../pages/discografia.html">DISCOGRAFÍA</a>
+                </li>
+                <li class="li">
+                    <a href="../pages/novedades.html">NOVEDADES</a>
+                </li>
+                <li class="li">
+                    <a href="../pages/suscribite.html">SUSCRIBITE</a>
+                </li>
             </ul>
         </nav>
-        <main class="main__suscripcion">
-            <div class="suscripcion-padre">
-                <div class="suscripcion">
-                    <h3>Suscribite al newsletter y mantenete al tanto de todas
-                        las novedades de la banda
-                    </h3>
+    </header>
+    <main class="main__suscripcion">
+        <div class="suscripcion-padre">
+            <div class="suscripcion">
+                <h3>Suscribite al newsletter y mantenete al tanto de todas
+                    las novedades de la banda
+                </h3>
+            </div>
+            <form class="formulario">
+                <label for="Nombre y Apellido">Nombre y Apellido </label>
+                <input type="text">
+                <label for="email">Email</label>
+                <input type="text">
+                <textarea placeholder="Aprovecha este espacio para contarnos tu experiencia con la banda!"></textarea>
+                <div class="tyc">
+                    <input type="radio" class="radio">
+                    Acepto terminos y condiciones
                 </div>
-                <form class="formulario">
-                    <label for="Nombre y Apellido">Nombre y Apellido </label>
-                    <input type="text">
-                    <label for="email">Email</label>
-                    <input type="text">
-                    <textarea
-                        placeholder="Aprovecha este espacio para contarnos tu experiencia con la banda!"></textarea>
-                    <div class="tyc">
-                        <input type="radio" class="radio">
-                        Acepto terminos y condiciones
-                    </div>
-                    <button>Enviar!
-                    </button>
-                </form>
-                <div class="imagen-suscrip">
-                    <img src="../assets/revista.jpg" class="revista">
+                <button>Enviar!
+                </button>
+            </form>
+            <div class="imagen-suscrip">
+                <img src="../assets/revista.jpg" class="revista">
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <div class="megadethpadre">
+            <div class="megadeth">
+                <!--centrar el logo-->
+                <a href="../index.html">
+                    <img src="../assets/md-logo.png" alt="" class="megadeth img_fluid">
+                </a>
+            </div>
+        </div>
+        <div class="gibsonpadre">
+            <div class="gibson">
+                <img src="../assets/dos.jpg" alt="" class="gibson img_fluid">
+            </div>
+        </div>
+        <div class="marshallpadre">
+            <div class="marshall">
+                <img src="../assets/marshallb.png" alt="" class="marshall img_fluid">
+            </div>
+        </div>
+        <div class="redespadre">
+            <!--encontrarle la vuelta a esto-->
+            <div class="redes">
+                <div><a href="https://www.instagram.com/megadeth/?hl=es" target="_blank">Instagram</a></div>
+                <div><a href="https://twitter.com/Megadeth?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                        target="_blank">Twitter</a></div>
+                <div><a href="https://www.youtube.com/channel/UCLVz1B001PIbq9LliJenV2w" target="_blank">Youtube</a>
                 </div>
             </div>
-        </main>
-        <footer class="footer__suscripcion">
-            <div class="megadethpadre">
-                <div class="megadeth">
-                    <img src="../assets/md-logo.png" alt="" class="megadeth">
-                </div>
-            </div>
-            <div class="gibsonpadre">
-                <div class="gibson">
-                    <img src="../assets/gibson.png" alt="" class="gibson">
-                </div>
-            </div>
-            <div class="marshallpadre">
-                <div class="marshall">
-                    <img src="../assets/marshall.png" alt="" class="marshall">
-                </div>
-            </div>
-            <div class="redespadre">
-                <div class="redes">
-                    <div>Instagram</div>
-                    <div>Twitter</div>
-                    <div>Youtube</div>
-                </div>
-            </div>
-        </footer>
-    </div>
+        </div>
+        <div class="spotify">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO17aFuo?utm_source=generator"
+                width="100%" height="80" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

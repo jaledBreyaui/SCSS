@@ -20,16 +20,13 @@
 </head>
 
 <body>
-
-    <div class="contenedor">
-        <header>
-            <div class="logo">
-                <a href="index.html" class="ancla">
-                    <img src="./assets/md-logo.png" alt="" class="logo__foto">
-                </a>
-            </div>
-        </header>
-        <nav class="navegacion">
+    <header class="container-fluid row index__header">
+        <div class="logo col-sm-12 col-md-2 row">
+            <a href="index.html" class="ancla col-xxl-10">
+                <img src="./assets/md-logo.png" alt="" class="img-fluid">
+            </a>
+        </div>
+        <nav class="navegacion col-sm-12 col-md-9">
             <ul class="navegador">
                 <li class="li">
                     <a href="./pages/labanda.html">LA BANDA</a>
@@ -45,62 +42,77 @@
                 </li>
             </ul>
         </nav>
-        <div class="lineup">
-            <img src="./assets/lineup.jpg" alt="" class="img-fluid">
-        </div>
-        <main class="main__index">
-            <div class="texto">Bienvenido a la página oficial de MEGADETH. Recorré el sitio para
-                enterarte
-                de las ultimas novedades y datos, visitar la discografía
-                y ver las proximas fechas de los conciertos de la banda de trash
-                número uno del mundo ╰(*°▽°*)╯
-            </div>
-            <div class="mainUno">
-                <p class="main__p">TOUR 2022</p>
-                <img src="./assets/tour22.jpg" alt="" class="img-fluid">
-            </div>
-            <div class="mainDos">
-                <p class="main__p">ÚLTIMO SHOW</p>
-                <img src="./assets/aovivo.jpg" alt="" class="img-fluid">
-            </div>
-            <div class="mainTres">
-                <p class="main__p">MERCHANDISING</p>
-                <img src="./assets/merchdos.png" alt="" class="img-fluid">
-            </div>
-            <div class="mainCuatro">
-                <p class="main__p">BUENOS AIRES 2010</p>
-                <img src="./assets/mustaineArg.jpg" alt="" class="img-fluid">
-            </div>
-        </main>
-        <footer>
-            <div class="megadethpadre">
-                <div class="megadeth">
-                    <a href="index.html">
-                        <img src="./assets/md-logo.png" alt="" class="megadeth img_fluid">
-                    </a>
-                </div>
-            </div>
-            <div class="gibsonpadre">
-                <div class="gibson">
-                    <img src="./assets/gibson.png" alt="" class="gibson img_fluid">
-                </div>
-            </div>
-            <div class="marshallpadre">
-                <div class="marshall">
-                    <img src="./assets/marshall.png" alt="" class="marshall img_fluid">
-                </div>
-            </div>
-            <div class="redespadre">
-                <div class="redes">
-                    <div><a href="https://www.instagram.com/megadeth/?hl=es" target="_blank">Instagram</a></div>
-                    <div><a href="https://twitter.com/Megadeth?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                            target="_blank">Twitter</a></div>
-                    <div><a href="https://www.youtube.com/channel/UCLVz1B001PIbq9LliJenV2w" target="_blank">Youtube</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+    </header>
+    <div class="lineup">
+        <img src="./assets/lineup.jpg" alt="" class="img-fluid">
     </div>
+    <main class="main__index container-fluid row">
+        <div class="texto container col-12">Bienvenido a la página oficial de MEGADETH. Recorré el sitio para
+            enterarte
+            de las ultimas novedades y datos, visitar la discografía
+            y ver las proximas fechas de los conciertos de la banda de trash
+            número uno del mundo ╰(*°▽°*)╯
+        </div>
+
+        <!--redimensionar de nuevo las imagenes pero  mas anchas-->
+
+        <div class="mainUno col-sm-12 col-md-6">
+            <p class="main__p">TOUR 2022</p>
+            <img src="./assets/tour22b.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="mainDos col-sm-12 col-md-6">
+            <p class="main__p">ÚLTIMO SHOW</p>
+            <img src="./assets/aovivo.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="mainTres -fluid  col-sm-12 col-md-6">
+            <p class="main__p">MERCHANDISING</p>
+            <img src="./assets/merchdos.png" alt="" class="img-fluid">
+        </div>
+        <div class="mainCuatro -fluid col-sm-12 col-md-6">
+            <p class="main__p">BUENOS AIRES 2010</p>
+            <img src="./assets/mustaineArg.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="mainCinco col-sm-12 col-md-12 ">
+            <p class="main__p">ÚLTIMA ENTREVISTA</p>
+            <iframe width="100%" height="600px" src="https://www.youtube.com/embed/j4VL3c7mKYo"
+                title="YouTube video player" frameborder="1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <div class="megadethpadre">
+            <div class="megadeth">
+                <a href="index.html">
+                    <img src="./assets/md-logo.png" alt="" class="megadeth img_fluid">
+                </a>
+            </div>
+        </div>
+        <div class="gibsonpadre">
+            <div class="gibson">
+                <img src="./assets/dos.jpg" alt="" class="gibson img_fluid">
+            </div>
+        </div>
+        <div class="marshallpadre">
+            <div class="marshall">
+                <img src="./assets/marshallb.png" alt="" class="marshall img_fluid">
+            </div>
+        </div>
+        <div class="redespadre">
+            <div class="redes">
+                <div><a href="https://www.instagram.com/megadeth/?hl=es" target="_blank">Instagram</a></div>
+                <div><a href="https://twitter.com/Megadeth?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                        target="_blank">Twitter</a></div>
+                <div><a href="https://www.youtube.com/channel/UCLVz1B001PIbq9LliJenV2w" target="_blank">Youtube</a>
+                </div>
+            </div>
+        </div>
+        <div class="spotify">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZI1Z6Eq6Z2C?utm_source=generator"
+                width="70%" height="80" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

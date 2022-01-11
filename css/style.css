@@ -8,236 +8,228 @@
   font-size: 22px;
   text-decoration: none; }
 
-@media screen and (max-width: 700px) {
-  .contenedor, .contenedor-banda {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 5% 20% 70% 5%;
-    grid-template-areas: "header" "navegacion"   "main" "footer"; }
-  .logo {
-    grid-area: header;
-    background-color: black;
+.index__header {
+  background-color: black;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+  margin: 0%; }
+
+.main__index {
+  background-color: gray;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+  padding: 20px; }
+
+.lineup {
+  display: flex;
+  justify-content: center;
+  background-color: black; }
+
+.main__index div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 25px; }
+
+.texto {
+  text-align: justify; }
+
+.main__p {
+  color: goldenrod;
+  font-weight: 500; }
+
+.labanda {
+  background-image: linear-gradient(to left, #000000, #595757);
+  padding: 30px; }
+  .labanda div {
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; }
-  .ancla {
-    height: 100%;
-    width: 100%; }
-    .ancla img {
-      width: 100%;
-      height: 92%; }
-  nav {
-    grid-area: navegacion; }
-    nav ul {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      background-color: black;
-      padding: 0%; }
-      nav ul li {
-        height: 25%;
-        width: 100%;
-        border-top: 2px solid goldenrod;
-        border-bottom: 2px solid goldenrod;
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-        nav ul li a {
-          text-decoration: none;
-          color: goldenrod; }
-  .lineup {
-    display: none; }
-  .main__index {
-    grid-area: main;
-    background-color: gray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3%; }
-  .texto {
-    text-align: justify; }
-  .mainUno, .mainDos, .mainCuatro, .mainTres {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10%;
-    height: 21%;
-    width: 100%; }
-    .mainUno img, .mainDos img, .mainCuatro img, .mainTres img {
-      width: 90%;
-      height: 95%; }
-    .mainUno p, .mainDos p, .mainCuatro p, .mainTres p {
+    justify-content: center; }
+    .labanda div h2 {
       display: flex;
       justify-content: center;
-      color: goldenrod;
-      font-size: 20px; }
-  .img__main__uno {
-    width: 60%;
-    height: 100%; }
-  .contenedor-banda {
-    height: 100%; }
-  .labanda {
-    grid-area: main;
-    height: 100%;
-    background-color: gray; }
-  .discos__contenedor {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 2% 5% 1%;
-    grid-template-areas: "dheader" "dnav" "dmain"    "dfooter"; }
-  .discos__navegacion {
-    grid-area: dnav; }
-  .discos__header {
-    grid-area: dheader; }
-  .discos__main {
-    grid-area: dmain; }
-  .discos__footer {
-    grid-area: dfooter; }
-  footer {
-    grid-area: footer;
-    display: grid;
-    grid-template-columns: 33% 43% 24%;
-    grid-template-rows: 45% 45%;
-    grid-template-areas: "gibson megadeth redes" "marshall meagdeth redes";
-    background-color: black;
-    row-gap: 3px;
-    resize: none; }
-    footer div {
-      height: 100%;
-      width: 100%; }
-      footer div div {
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-  .megadethpadre {
-    grid-area: megadeth; }
-    .megadethpadre div img {
-      height: 100%;
-      width: 90%; }
-  .gibsonpadre {
-    grid-area: gibson;
+      color: goldenrod; }
+    .labanda div p {
+      text-align: justify;
+      color: whitesmoke; }
+
+.navegador {
+  list-style-type: none; }
+  .navegador li a {
+    color: goldenrod;
+    text-decoration: none;
+    text-decoration-style: none;
+    letter-spacing: 1.5px; }
+
+.dis
+.discos__main {
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100%; }
+
+.discos__padre {
+  background-image: linear-gradient(to left, #000000, #595757);
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px; }
+  .discos__padre div {
+    display: flex;
+    align-items: center;
+    font-size: 30px; }
+  .discos__padre h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: goldenrod;
+    letter-spacing: 2px;
+    font-family: 1; }
+
+.info {
+  display: none;
+  position: absolute; }
+
+.card {
+  background-color: gray;
+  margin: 80px 80px;
+  max-width: 500px;
+  height: auto;
+  border: 2px solid black; }
+
+.card-body {
+  color: goldenrod; }
+
+.main__novedades {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px; }
+  .main__novedades h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: goldenrod; }
+
+.noticia {
+  background-color: black;
+  overflow-y: scroll;
+  width: 90%;
+  height: 900px;
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  border: 2px solid goldenrod; }
+
+.noticia__hijo {
+  max-height: 600px;
+  max-width: 500px;
+  margin: 5px 5px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .noticia__hijo p {
+    text-align: justify;
+    color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between; }
-    .gibsonpadre div img {
-      height: 90%;
-      width: 95%; }
-  .marshallpadre {
-    grid-area: marshall; }
-    .marshallpadre div img {
-      height: 90%;
-      width: 95%; }
-  .redespadre {
-    grid-area: redes; }
-    .redespadre div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: goldenrod; } }
 
-@media screen and (min-width: 700px) {
-  .contenedor {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 2% 17% 76% 5%;
-    grid-template-areas: "logo navegacion" "header header" "main main" "footer footer";
-    width: 100%;
-    background-color: black; }
+.shows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 100%; }
+
+.showUno, .showDos, .showTres, .showCuatro, .showCinco, .showSeis, .showSiete {
+  background-color: black;
+  width: 95%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: whitesmoke;
+  margin: 25px 25px;
+  font-size: 30px; }
+
+.comprar {
+  padding: 15px;
+  background-color: red; }
+
+@media screen and (max-width: 768px) {
   .logo {
-    grid-area: logo;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    position: relative;
-    left: 20px; }
-  .ancla {
-    height: 100%;
-    width: 100%; }
-    .ancla img {
-      width: 100%;
-      height: 90%; }
-  .lineup {
-    grid-area: header;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .lineup img {
-      height: 90%;
-      width: 100%;
-      position: relative;
-      top: -45px; }
+    border-bottom: 2px solid goldenrod; }
   .navegacion {
-    grid-area: navegacion;
-    background-color: black; }
-    .navegacion ul {
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly; }
-      .navegacion ul li {
-        list-style-type: none; }
-        .navegacion ul li a {
-          text-decoration: none;
-          color: goldenrod;
-          font-size: 17px;
-          letter-spacing: 1px; }
-          .navegacion ul li a:hover {
-            text-decoration: underline goldenrod; }
-  .main__index {
-    grid-area: main;
-    background-color: gray;
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     justify-content: center; }
+    .navegacion ul {
+      margin: 0%;
+      padding: 0%;
+      width: 100%;
+      height: 100%; }
+      .navegacion ul li {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 45px;
+        padding-bottom: 45px;
+        border-bottom: 2px solid goldenrod; }
+        .navegacion ul li a {
+          font-size: 17px; }
+  .showUno, .showDos, .showTres, .showCuatro, .showCinco, .showSeis, .showSiete {
+    font-size: 20px;
+    flex-direction: column; }
   .texto {
-    position: relative;
-    top: -60px;
-    text-align: justify;
-    padding-left: 15px;
-    padding-right: 15px; }
-  .mainUno, .mainDos, .mainTres, .mainCuatro {
+    font-size: 20px; }
+  .main__p {
+    font-size: 23px; }
+  .lineup {
+    display: none; }
+  .labanda {
+    width: 100%; }
+    .labanda div p {
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: 1px; }
+  .boxUno, .boxDos, .boxTres {
     display: flex;
     flex-direction: column;
-    height: 21%;
-    width: 100%;
     align-items: center;
-    justify-content: center;
-    margin-top: 3%;
-    margin-bottom: 3%; }
-    .mainUno p, .mainDos p, .mainTres p, .mainCuatro p {
-      color: goldenrod;
-      font-size: 27px; }
-    .mainUno img, .mainDos img, .mainTres img, .mainCuatro img {
-      width: 90%;
-      height: 95%; }
-  .contenedor-banda {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 3% 20% 71% 6%;
-    grid-template-areas: "logo navegacion" "main main" "main main" "footer footer";
-    width: 100%;
-    row-gap: 5px;
-    background-color: black; }
+    justify-content: space-between; }
   footer {
     grid-area: footer;
+    height: 15vh;
     display: grid;
-    grid-template-columns: 33% 41% 26%;
+    grid-template-columns: 33% 43% 24%;
     grid-template-rows: 45% 45%;
-    grid-template-areas: "gibson megadeth redes" "marshall meagdeth redes";
+    grid-template-areas: "gibson megadeth redes" "marshall sporify redes";
     background-color: black;
     row-gap: 3px; }
     footer div {
@@ -248,27 +240,131 @@
         justify-content: center;
         align-items: center; }
   .megadethpadre {
-    grid-area: megadeth; }
+    grid-area: megadeth;
+    max-width: 350px; }
     .megadethpadre div img {
       height: 100%;
-      width: 90%;
-      max-width: 400px; }
+      width: 100%; }
   .gibsonpadre {
-    grid-area: gibson; }
+    grid-area: gibson;
+    max-width: 350px; }
     .gibsonpadre div {
-      display: flex;
-      justify-content: flex-start;
-      margin-left: 20px; }
+      height: 100%;
+      width: 65%;
+      margin-right: 20px; }
       .gibsonpadre div img {
-        height: 90%;
+        height: 50%;
         width: 95%;
         max-width: 400px; }
   .marshallpadre {
-    grid-area: marshall; }
+    grid-area: marshall;
+    max-width: 350px; }
     .marshallpadre div {
-      margin-left: 20px;
+      width: 65%;
+      height: 100%; }
+      .marshallpadre div img {
+        height: 90%;
+        width: 95%;
+        max-width: 300px; }
+  .redespadre {
+    grid-area: redes; }
+    .redespadre div {
       display: flex;
-      justify-content: flex-start; }
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: goldenrod; }
+  .spotify {
+    display: none; } }
+
+@media screen and (min-width: 768px) {
+  .navegador {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 15px; }
+    .navegador li a {
+      font-size: 21px; }
+  .index__header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px; }
+  .lineup {
+    border-top: 3px solid black; }
+  .texto {
+    font-size: 25px; }
+  .main__p {
+    font-size: 25px; }
+  .labanda div p {
+    font-size: 25px;
+    padding-right: 50px;
+    padding-left: 50px; }
+  footer {
+    grid-area: footer;
+    display: grid;
+    height: 22vh;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 45% 45%;
+    grid-template-areas: "gibson megadeth redes" "marshall spotify redes";
+    background-color: black;
+    row-gap: 3px; }
+    footer div {
+      height: 100%;
+      width: 100%; }
+      footer div div {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+  .megadethpadre {
+    grid-area: megadeth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+    .megadethpadre div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; }
+      .megadethpadre div img {
+        height: 100%;
+        width: 100%;
+        max-width: 400px; }
+  .gibsonpadre {
+    grid-area: gibson;
+    max-width: 350px;
+    margin-left: 40px; }
+    .gibsonpadre div {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 10px;
+      height: 100%;
+      width: 55%; }
+      .gibsonpadre div img {
+        height: 50%;
+        width: 95%;
+        max-width: 400px; }
+  .marshallpadre {
+    grid-area: marshall;
+    max-width: 350px;
+    margin-left: 40px; }
+    .marshallpadre div {
+      margin-left: 10px;
+      display: flex;
+      justify-content: flex-start;
+      height: 100%;
+      width: 55%; }
       .marshallpadre div img {
         height: 90%;
         width: 95%;
@@ -278,74 +374,25 @@
     .redespadre div {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       color: goldenrod;
-      padding-left: 10%; } }
-
-@media screen and (min-width: 1100px) {
-  .contenedor {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 3.5% 29% 60.5% 7%;
-    grid-template-areas: "logo  nav" "header header" "main main" "footer footer";
-    height: 320vh; }
-  .navegacion {
-    grid-area: nav; }
-    .navegacion ul {
-      align-items: center; }
-      .navegacion ul li a {
-        font-size: 22px; }
-        .navegacion ul li a:hover {
-          text-decoration: underline goldenrod; }
-  .lineup {
-    grid-area: header; }
-    .lineup img {
-      width: 100%;
-      height: 90%;
-      max-height: 1080px;
-      max-width: 1920px;
-      position: relative; }
-  .ancla {
-    height: 100%;
-    width: 100%; }
-    .ancla img {
-      width: 110%;
-      height: 100%;
-      position: relative;
-      bottom: -8px; }
-  .main__index {
-    display: grid;
-    grid-template-rows: 5% 47.5% 47.5%;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "texto texto" "uno dos" "tres cuatro"; }
-  .texto {
-    grid-area: texto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    height: 100%;
-    position: relative;
-    top: 10px;
-    margin: 30px 30px 30px 0px; }
-  .mainUno {
-    grid-area: uno; }
-  .mainDos {
-    grid-area: dos; }
-  .mainTres {
-    grid-area: tres; }
-  .mainCuatro {
-    grid-area: cuatro; }
-  .mainUno, .mainDos, .mainTres, .mainCuatro {
-    height: 65%;
+      margin-top: 10px; }
+      .redespadre div div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; }
+      .redespadre div a {
+        font-size: 25px; }
+  .spotify {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; }
-  .megadethpadre {
-    position: relative;
-    left: -50px; } }
+    justify-content: space-between;
+    justify-content: flex-end; } }
+
+.navegador li a:hover {
+  text-decoration: underline goldenrod; }
 
 .redes div a {
   text-decoration: none;

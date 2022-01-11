@@ -3,12 +3,22 @@
     padding:0%;   
 }
 
+@mixin reset{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+}
+
 @mixin centrado  {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;    
 }
+
+
+
 
 .detalle {
     font-family: 'Courier New', Courier, monospace;
@@ -17,147 +27,263 @@
     text-decoration: none;
 }
 
+.index__header{
+    background-color: rgb(0, 0, 0);
+    @include reset();
+    margin: 0%;
+}
+
+.main__index{
+    background-color: gray;
+    @include reset();
+    padding: 20px;
+}
+
+.lineup{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    
+}
+
+.main__index div {
+    @include centrado();
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.texto{
+    text-align: justify;
+    
+}
+
+.main__p{
+    color: goldenrod;
+    font-weight: 500;
+}
 
 
-@media screen and (max-width:700px){
-    .contenedor, .contenedor-banda{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 5% 20% 70% 5%;
-        grid-template-areas: "header"
-        "navegacion"  
-        "main"
-        "footer";
-        
-    }
 
-    .logo{
-        grid-area: header;
-        background-color: black;
+.labanda{
+    background-image: linear-gradient(to left, #000000, #595757);;
+    padding: 30px;
+    div{
+        margin-top: 30px;
+        margin-bottom: 30px;
         display: flex;
         justify-content: center;
+        h2{
+            display: flex;
+            justify-content: center;
+            color: goldenrod;
+        }
+        p{
+            text-align: justify;
+            color: whitesmoke;
+        }
+    }
+}
+
+.navegador{
+    list-style-type:none;
+    li{
+            a{
+                color: goldenrod;
+                text-decoration: none;
+                text-decoration-style: none;
+                letter-spacing: 1.5px;
+            }
+        }
+
+}
+
+.dis
+
+.discos__main{
+    @include reset();
+    
+}
+
+.discos__padre{
+    background-image: linear-gradient(to left, #000000, #595757);
+    @include reset();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    div{
+        display: flex;
         align-items: center;
-        height: 100%;
+        font-size: 30px;
     }
     
-    .ancla{
-        height: 100%;
-        width: 100%;
-            img{
-                width: 100%;
-                height: 92%;
-            }
-    }   
+    h2{
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        color: goldenrod;
+        letter-spacing: 2px;
+        font-family: random($limit: 1);
+    }
+}
 
-    nav {
-        grid-area: navegacion;
+.info{
+    display: none;
+    position: absolute;
+}
+
+.card{
+    background-color: gray;
+    margin: 80px 80px;
+    max-width: 500px;
+    height: auto;  
+    border: 2px solid black;  
+}
+
+.card-body {
+    color: goldenrod;
+}
+
+.main__novedades{
+    background-color: gray;
+    @include centrado();
+    padding: 50px;
+
+    h2{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        color: goldenrod;
+    }
+}
+
+.noticia{
+    background-color: black;
+    overflow-y: scroll;
+    width:90%;
+    height:  900px;
+    background-color: black;
+    padding: 10px;
+    display: flex;    
+    border: 2px solid goldenrod;
+}
+
+.noticia__hijo{    
+    max-height: 600px;
+    max-width: 500px;
+    margin: 5px 5px;
+    background-color: gray;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    p{
+        text-align: justify;
+        color: whitesmoke;
+        @include centrado();
+    }
+}
+
+.shows{
+    @include centrado();
+    margin-top: 50px;
+    width: 100%;
+}
+
+.showUno, .showDos, .showTres, .showCuatro, .showCinco, .showSeis, .showSiete{
+    background-color: black;
+    width: 95%;
+    height: 300px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: whitesmoke;
+    margin: 25px 25px;
+    font-size: 30px;
+}
+
+.comprar{
+    padding: 15px;
+    background-color: red;
+}
+
+
+
+@media screen and (max-width:768px){
+
+    .logo{
+        border-bottom: 2px solid goldenrod;
+    }
+
+    .navegacion{
+        @include reset();
+        display: flex;
+        align-items: center;
+        justify-content: center;
         ul{
-            height: 100%;
-            @include centrado();
-            background-color: black;
-            padding: 0%;
-
+            @include reset();     
             li{
-                height: 25%;
-                width: 100%;
-                border-top: 2px solid goldenrod;
+                width:100% ;
+                @include centrado();
+                padding-top: 45px;
+                padding-bottom: 45px;
                 border-bottom: 2px solid goldenrod;
-                display: flex;
-                align-items: center;
-                justify-content: center;
 
-                a{
-                    text-decoration:none;
-                    color: goldenrod;
-                    
+                a{      
+                    font-size: 17px;                  
                 }
             }
         }
     }
+    .showUno, .showDos, .showTres, .showCuatro, .showCinco, .showSeis, .showSiete{
+        font-size: 20px;
+        flex-direction: column;
+    }
+
+    .texto{
+        font-size: 20px;
+    }
+    .main__p{
+        font-size: 23px;        
+    }
 
     .lineup{
-        display: none;
+        display: none;      
     }
 
-    .main__index{
-        grid-area: main;
-        background-color: gray;
-        @include centrado();
-        padding: 3%;
-    }
-    .texto{
-        text-align: justify;
-    }
-    
-    .mainUno , .mainDos, .mainCuatro, .mainTres{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 10%;
-        height: 21%;
-        width: 100%;
-        img{
-            width: 90%;
-            height: 95%;
-        }
-        
-        p{
-            display: flex;
-            justify-content: center;
-            color: goldenrod;
-            font-size: 20px;
-        }
-    }
-    
-    .img__main__uno{
-        width: 60%;
-        height: 100%;
-    }
-
-    .contenedor-banda{
-        height: 100%;
-    }
     .labanda{
-        grid-area: main;
-        height: 100%;
-        background-color: gray;
+        width: 100%;
+        div{
+            p{
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 1px
+            }
+        }
     }
 
-    .discos__contenedor{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 2% 5% 89 % 2%;
-        grid-template-areas: "dheader"
-                            "dnav"
-                            "dmain"   
-                            "dfooter";
+    .boxUno, .boxDos, .boxTres{
+        @include centrado();
     }
 
-    .discos__navegacion{
-        grid-area: dnav;
-    }
-
-    .discos__header{
-        grid-area: dheader;
-    }
-
-    .discos__main {
-        grid-area: dmain;
-    }
-
-    .discos__footer{
-        grid-area: dfooter;
-    }
+    
 
 
+
+
+    
     footer{
         grid-area: footer;
+        height: 15vh;
         display: grid;
         grid-template-columns: 33% 43% 24%;
         grid-template-rows: 45% 45%;
         grid-template-areas: "gibson megadeth redes"
-                            "marshall meagdeth redes";
+                            "marshall sporify redes";
         background-color: black;
         row-gap: 3px;
         div{
@@ -170,36 +296,46 @@
             }
             
         }
-        resize: none;
+    
     }
     
     .megadethpadre{
         grid-area: megadeth;
+        max-width: 350px;
         div{
+            
             img{
                 height: 100%;
-                width: 90%;
+                width: 100%;
                 
             }
         }
     }
     .gibsonpadre{
         grid-area: gibson;
-        @include centrado();
+        max-width: 350px;
         div{
+            height: 100%;
+            width: 65%;
+            margin-right: 20px;
             img{
-                height: 90%;
-                width: 95%;   
+                height: 50%;
+                width: 95%; 
+                max-width: 400px;  
             }
         }
     }
 
     .marshallpadre{
         grid-area: marshall;
+        max-width: 350px;
         div{
+            width: 65%;
+            height: 100%;
             img{
                 height: 90%;
-                width: 95%;   
+                width: 95%;  
+                max-width: 300px; 
             }
         }
     }
@@ -214,139 +350,75 @@
             color: goldenrod;
         }
     }
+
+    .spotify{
+        display: none;
+    }
 }
 
-@media screen and (min-width:700px){    
-    .contenedor{
-        display:grid;
-        grid-template-columns: 30% 70%;
-        grid-template-rows: 2% 17% 76% 5%;
-        grid-template-areas: "logo navegacion"
-                            "header header"
-                            "main main"
-                            "footer footer";
-        width: 100%;
-        background-color: black;
-    }
+@media screen and (min-width:768px){    
     
-    .logo{
-        grid-area: logo;
-        height: 100%;
-        width: 100%;
-        background-color: black;
+    .navegador{
+        @include reset();
         display: flex;
-        align-items:flex-end;
-        justify-content: center;
-        position: relative;
-        left: 20px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 15px;
+        li{
+            a{
+                font-size: 21px;
+            }
+        }
     }
 
-    
-    .ancla {
-        height: 100%;
-        width: 100%;
-            img{
-                width: 100%;
-                height: 90%;
-            }
-    }
-    
-    .lineup{
-        grid-area: header;
-        background-color: black;
+    .index__header{
+        height: 10vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        img {
-            height: 90%;
-            width: 100%;
-            position: relative;
-            top: -45px;
-        }
     }
-    
-    .navegacion{
-        grid-area: navegacion;
-        background-color: black;
-        ul{
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
 
-            li{
-                list-style-type: none;
-                
-                a{
-                    text-decoration: none;
-                    color: goldenrod;
-                    font-size: 17px;
-                    letter-spacing: 1px;
-                    &:hover{
-                        text-decoration: underline goldenrod;
-                    }
-                }
-            }
-        }
-    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
     
-    .main__index{
-        grid-area: main;
-        background-color: gray;
-        @include centrado();
-        justify-content: center;        
+    }
+
+
+    .lineup{
+        border-top: 3px solid black;
+        
     }
 
     .texto{
-        position: relative;
-        top: -60px;
-        text-align: justify;
-        padding-left: 15px;
-        padding-right: 15px;
+        font-size: 25px;
     }
-    
-    .mainUno, .mainDos, .mainTres, .mainCuatro{
-        display: flex;
-        flex-direction: column;
-        height: 21%;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        margin-top: 3%;
-        margin-bottom: 3%;
+
+    .main__p{
+        font-size: 25px;
+    }
+
+    .labanda{
+        div{
             p{
-                color: goldenrod;
-                font-size: 27px;
+                font-size: 25px;
+                padding-right: 50px;
+                padding-left: 50px;
             }
-            img{
-                width: 90%;
-                height: 95%;
-            }  
+        }
     }
-
-
-    .contenedor-banda{
-        display: grid;
-        grid-template-columns: 30% 70%;
-        grid-template-rows: 3% 20% 71% 6%;
-        grid-template-areas: "logo navegacion"
-                            "main main"
-                            "main main"
-                            "footer footer";
-        width: 100%;
-        row-gap: 5px;
-        background-color: black;
-    }
-    
 
     footer{
         grid-area: footer;
         display: grid;
-        grid-template-columns: 33% 41% 26%;
+        height: 22vh;
+        grid-template-columns: 25% 50% 25%;
         grid-template-rows: 45% 45%;
         grid-template-areas: "gibson megadeth redes"
-                            "marshall meagdeth redes";
+                            "marshall spotify redes";
         background-color: black;
         row-gap: 3px;
         div{
@@ -364,10 +436,12 @@
     
     .megadethpadre{
         grid-area: megadeth;
+        @include centrado();
         div{
+            @include centrado();
             img{
                 height: 100%;
-                width: 90%;
+                width: 100%;
                 max-width: 400px;
                 
             }
@@ -375,12 +449,16 @@
     }
     .gibsonpadre{
         grid-area: gibson;
+        max-width: 350px;
+        margin-left: 40px;
         div{
             display: flex;
             justify-content: flex-start;
-            margin-left: 20px;
+            margin-left: 10px;
+            height: 100%;
+            width: 55%;
             img{
-                height: 90%;
+                height: 50%;
                 width: 95%; 
                 max-width: 400px;  
             }
@@ -389,10 +467,14 @@
 
     .marshallpadre{
         grid-area: marshall;
+        max-width: 350px;
+        margin-left: 40px;
         div{
-            margin-left: 20px;
+            margin-left: 10px;
             display: flex;
             justify-content: flex-start;
+            height: 100%;
+            width: 55%;
             img{
                 height: 90%;
                 width: 95%;
@@ -406,114 +488,38 @@
         div{
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             color: goldenrod;
-            padding-left: 10%;
+            margin-top: 10px;
+            div{
+                @include centrado();
+            }
+            
+            a{
+                    font-size: 25px;
+                }
+            
         }
+    }
+    .spotify{
+        @include centrado();
+        justify-content: flex-end;
     }
 }
 
-@media screen and (min-width:1100px){
+@media screen and (min-width:2000px){
 
-    .contenedor{
-        display:grid;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: 3.5% 29% 60.5% 7%;
-        grid-template-areas: "logo  nav"
-                            "header header"
-                            "main main"
-                            "footer footer";
-    height: 320vh;        
-    }
+}
 
-    .navegacion{
-        grid-area: nav;
-        ul{
-            align-items: center;
-
-            li{
-                
-
-                a{
-                    font-size: 22px;
-                    &:hover{
-                        text-decoration: underline goldenrod;
-                    }
-                }
+.navegador{    
+    li{
+        a{
+            &:hover{
+                    text-decoration: underline goldenrod;
             }
         }
     }
-
-    .lineup {
-        grid-area: header;
-        img{
-            width: 100%;
-            height: 90%;
-            max-height: 1080px;
-            max-width: 1920px;
-            position: relative;                        
-        }
-    }
-
-    .ancla {
-        height: 100%;
-        width: 100%;
-            img{
-                width: 110%;
-                height: 100%;
-                position: relative;
-                bottom: -8px
-            }
-    }
-
-    .main__index{
-        display: grid;
-        grid-template-rows: 5% 47.5% 47.5%;
-        grid-template-columns: 50% 50%;
-        grid-template-areas:    "texto texto"
-                                "uno dos"
-                                "tres cuatro";
-    }
-
-    .texto{
-        grid-area: texto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 25px;
-        height: 100%;
-        position: relative;
-        top: 10px;
-        margin: 30px 30px 30px 0px;
-    }
-
-    .mainUno{
-        grid-area: uno;
-    }
-
-    .mainDos{
-        grid-area: dos;
-    }
-    .mainTres{
-        grid-area: tres;
-    }
     
-    .mainCuatro{
-        grid-area: cuatro
-    }
-
-    .mainUno, .mainDos, .mainTres, .mainCuatro{
-        height: 65%;
-        @include centrado()
-    }
-
-    
-
-    .megadethpadre{
-        position: relative;
-        left: -50px;
-    }
 
 }
 
