@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Special+Elite&display=swap" rel="stylesheet">
     <title>Suscribite!</title>
     <meta name="keywords" content="Megadeth, Mustaine, Dave Mustaine,
     Trash Metal, Kiko Loureiro, Elefson, discos de Megadeth, suscripcion Megadeth, informacion de Megadeth">
@@ -18,7 +23,7 @@
 
 <body>
     <header class="container-fluid row index__header">
-        <div class="logo col-sm-12 col-md-2">
+        <div class="logo col-sm-12 col-md-2 row">
             <a href="../index.html" class="ancla">
                 <img src="../assets/md-logo.png" alt="" class="img-fluid">
             </a>
@@ -41,27 +46,32 @@
         </nav>
     </header>
     <main class="main__suscripcion">
-        <div class="suscripcion-padre">
-            <div class="suscripcion">
-                <h3>Suscribite al newsletter y mantenete al tanto de todas
+        <div class="suscripcion__padre row">
+            <div class="suscripcion col-12">
+                <h2>Suscribite al newsletter y mantenete al tanto de todas
                     las novedades de la banda
-                </h3>
+                </h2>
             </div>
-            <form class="formulario">
-                <label for="Nombre y Apellido">Nombre y Apellido </label>
-                <input type="text">
-                <label for="email">Email</label>
-                <input type="text">
-                <textarea placeholder="Aprovecha este espacio para contarnos tu experiencia con la banda!"></textarea>
-                <div class="tyc">
-                    <input type="radio" class="radio">
-                    Acepto terminos y condiciones
-                </div>
-                <button>Enviar!
-                </button>
-            </form>
-            <div class="imagen-suscrip">
-                <img src="../assets/revista.jpg" class="revista">
+            <div class="suscripcion__img col-lg-12 col-xl-6">
+                <img src="../assets/revista.jpg" class="revista img-fluid">
+            </div>
+            <div class="formulario col-lg-12 col-xl-6">
+                <form class="">
+                    <label for="Nombre y Apellido">Nombre y Apellido </label>
+                    <input type="text">
+                    <label for="email">Email</label>
+                    <input type="text">
+                    <textarea
+                        placeholder="Aprovecha este espacio para contarnos tu experiencia con la banda!"></textarea>
+                    <div class="tyc">
+                        <input type="radio" class="radio">
+                        Acepto terminos y condiciones
+                    </div>
+                    <div class="boton">
+                        <button>Enviar!
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </main>

@@ -1,12 +1,14 @@
 * {
   margin: 0%;
-  padding: 0%; }
+  padding: 0%;
+  font-family: 'Roboto', sans-serif; }
 
 .detalle {
   font-family: 'Courier New', Courier, monospace;
   color: goldenrod;
   font-size: 22px;
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline; }
 
 .index__header {
   background-color: black;
@@ -17,7 +19,7 @@
   margin: 0%; }
 
 .main__index {
-  background-color: gray;
+  background-color: #595757;
   margin: 0%;
   padding: 0%;
   width: 100%;
@@ -63,12 +65,12 @@
 .navegador {
   list-style-type: none; }
   .navegador li a {
-    color: goldenrod;
+    color: #d1990b;
     text-decoration: none;
     text-decoration-style: none;
-    letter-spacing: 1.5px; }
+    letter-spacing: 1.5px;
+    font-weight: 600; }
 
-.dis
 .discos__main {
   margin: 0%;
   padding: 0%;
@@ -110,10 +112,10 @@
   border: 2px solid black; }
 
 .card-body {
-  color: goldenrod; }
+  color: #d1990b; }
 
 .main__novedades {
-  background-color: gray;
+  background-color: #595757;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,33 +125,55 @@
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-    color: goldenrod; }
+    color: #d1990b;
+    letter-spacing: 1.5px;
+    font-weight: 500; }
 
 .noticia {
   background-color: black;
   overflow-y: scroll;
-  width: 90%;
+  width: 75%;
+  max-width: 1420px;
   height: 900px;
   background-color: black;
   padding: 10px;
   display: flex;
-  border: 2px solid goldenrod; }
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around; }
+
+.noticia__padre {
+  display: flex; }
 
 .noticia__hijo {
-  max-height: 600px;
-  max-width: 500px;
-  margin: 5px 5px;
-  background-color: gray;
+  margin: 10px 10px;
+  padding: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center; }
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #d1990b; }
   .noticia__hijo p {
     text-align: justify;
-    color: whitesmoke;
+    color: #d1990b;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between; }
+
+.cargar {
+  background-color: #595757;
+  color: #d1990b;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  height: 30px; }
+  .cargar:hover {
+    text-decoration: underline;
+    background-color: gray; }
 
 .shows {
   display: flex;
@@ -175,10 +199,81 @@
 .comprar {
   padding: 15px;
   background-color: red; }
+  .comprar:hover {
+    background-color: #d1990b; }
+
+.main__suscripcion {
+  background-color: #595757;
+  padding: 20px; }
+
+.suscripcion {
+  display: flex;
+  justify-content: center;
+  text-align: justify; }
+  .suscripcion h2 {
+    color: #d1990b; }
+
+.suscripcion__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; }
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500; }
+  .formulario label {
+    font-size: 25px; }
+  .formulario input {
+    width: 100%;
+    background-color: #d1990b;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    height: 40px; }
+  .formulario textarea {
+    margin-top: 20px;
+    height: 180px;
+    width: 100%;
+    background-color: #d1990b; }
+  .formulario button {
+    margin-top: 30px;
+    align-self: center;
+    width: 100px;
+    height: 60px;
+    background-color: #d1990b;
+    font-size: 25px;
+    font-weight: 600; }
+
+.tyc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 25px;
+  position: relative;
+  left: -22px;
+  margin-top: 20px; }
+  .tyc input {
+    height: 20px;
+    width: 10%;
+    position: relative;
+    top: 9px;
+    background-color: #d1990b; }
+
+.boton {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
 
 @media screen and (max-width: 768px) {
   .logo {
-    border-bottom: 2px solid goldenrod; }
+    border-bottom: 2px solid #d1990b;
+    display: flex;
+    justify-content: center; }
   .navegacion {
     margin: 0%;
     padding: 0%;
@@ -200,7 +295,7 @@
         justify-content: space-between;
         padding-top: 45px;
         padding-bottom: 45px;
-        border-bottom: 2px solid goldenrod; }
+        border-bottom: 2px solid #d1990b; }
         .navegacion ul li a {
           font-size: 17px; }
   .showUno, .showDos, .showTres, .showCuatro, .showCinco, .showSeis, .showSiete {
@@ -223,6 +318,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between; }
+  .noticia__hijo p {
+    font-size: 15px;
+    color: #d1990b; }
+  .noticia__padre {
+    flex-direction: column; }
   footer {
     grid-area: footer;
     height: 15vh;
@@ -310,6 +410,16 @@
     font-size: 25px;
     padding-right: 50px;
     padding-left: 50px; }
+  .noticia__hijo p {
+    font-size: 25px; }
+  .noticia__padre {
+    flex-direction: column; }
+  .formulario {
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px; }
   footer {
     grid-area: footer;
     display: grid;
@@ -375,7 +485,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: goldenrod;
+      color: #d1990b;
       margin-top: 10px; }
       .redespadre div div {
         display: flex;
@@ -391,15 +501,30 @@
     justify-content: space-between;
     justify-content: flex-end; } }
 
+@media screen and (min-width: 1200px) {
+  .noticia__padre {
+    flex-direction: row; }
+  .dos, .cuatro, .seis {
+    position: relative;
+    top: 90px; }
+  .main__novedades h2 {
+    font-size: 40px; }
+  .cargar {
+    position: relative;
+    top: 50px; }
+  .formulario {
+    width: 50%; } }
+
 .navegador li a:hover {
-  text-decoration: underline goldenrod; }
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 2px; }
 
 .redes div a {
   text-decoration: none;
-  color: goldenrod; }
+  color: #d1990b; }
   .redes div a:hover {
-    text-decoration: underline goldenrod; }
+    text-decoration: underline #d1990b; }
 
 .mainUno img:hover, .mainDos img:hover, .mainTres img:hover, .mainCuatro img:hover {
   opacity: .8;
-  border: 2px solid goldenrod; }
+  border: 2px solid #d1990b; }

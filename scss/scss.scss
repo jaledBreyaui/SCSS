@@ -1,6 +1,7 @@
 *{
     margin:0%;
-    padding:0%;   
+    padding:0%;  
+    font-family: 'Roboto', sans-serif; 
 }
 
 @mixin reset{
@@ -18,13 +19,12 @@
 }
 
 
-
-
 .detalle {
     font-family: 'Courier New', Courier, monospace;
     color: goldenrod;
     font-size: 22px;
     text-decoration: none;
+    display: inline;
 }
 
 .index__header{
@@ -33,8 +33,10 @@
     margin: 0%;
 }
 
+
+
 .main__index{
-    background-color: gray;
+    background-color: #595757;
     @include reset();
     padding: 20px;
 }
@@ -63,7 +65,6 @@
 }
 
 
-
 .labanda{
     background-image: linear-gradient(to left, #000000, #595757);;
     padding: 30px;
@@ -76,10 +77,12 @@
             display: flex;
             justify-content: center;
             color: goldenrod;
+            
         }
         p{
             text-align: justify;
             color: whitesmoke;
+            
         }
     }
 }
@@ -88,16 +91,18 @@
     list-style-type:none;
     li{
             a{
-                color: goldenrod;
+                color: rgb(209, 153, 11);
                 text-decoration: none;
                 text-decoration-style: none;
                 letter-spacing: 1.5px;
+                font-weight: 600;
+                
             }
         }
 
 }
 
-.dis
+
 
 .discos__main{
     @include reset();
@@ -142,11 +147,11 @@
 }
 
 .card-body {
-    color: goldenrod;
+    color: rgb(209, 153, 11);
 }
 
 .main__novedades{
-    background-color: gray;
+    background-color:#595757;
     @include centrado();
     padding: 50px;
 
@@ -154,36 +159,57 @@
         display: flex;
         justify-content: center;
         margin-bottom: 10px;
-        color: goldenrod;
+        color: rgb(209, 153, 11);
+        letter-spacing: 1.5px;
+        font-weight: 500;
     }
 }
 
 .noticia{
     background-color: black;
     overflow-y: scroll;
-    width:90%;
+    width:75%;
+    max-width: 1420px;
     height:  900px;
     background-color: black;
     padding: 10px;
-    display: flex;    
-    border: 2px solid goldenrod;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-around;    
+    
 }
 
-.noticia__hijo{    
-    max-height: 600px;
-    max-width: 500px;
-    margin: 5px 5px;
-    background-color: gray;
-    
+.noticia__padre{
     display: flex;
-    align-items: center;
+}
+.noticia__hijo{    
+    margin: 10px 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction:column ;
     justify-content: center;
-    
+    border: 2px solid rgb(209, 153, 11);    
     p{
         text-align: justify;
-        color: whitesmoke;
+        color: rgb(209, 153, 11);
         @include centrado();
     }
+}
+
+.cargar{
+    background-color: #595757;
+    color: rgb(209, 153, 11);
+    @include reset();
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    &:hover{
+        text-decoration: underline;
+        background-color: gray
+        }
+    
 }
 
 .shows{
@@ -209,14 +235,107 @@
 .comprar{
     padding: 15px;
     background-color: red;
+    &:hover{
+        background-color: rgb(209, 153, 11);
+    }
 }
+
+.main__suscripcion{
+    background-color: #595757;
+    padding: 20px;
+}
+
+.suscripcion{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    h2{
+        color: rgb(209, 153, 11);
+        
+    }
+
+}
+
+.suscripcion__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    
+    label{
+        font-size: 25px;
+    }
+
+    input{
+        width: 100%;
+        background-color: rgb(209, 153, 11);
+        margin-top: 5px;
+        margin-bottom: 20px;
+        height: 40px;
+    }
+
+    textarea{
+        margin-top: 20px;
+        height: 180px;
+        width: 100%;
+        background-color: rgb(209, 153, 11);
+    }
+
+    
+    button{
+        margin-top: 30px;
+        align-self: center;
+        width: 100px;
+        height: 60px;
+        background-color: rgb(209, 153, 11);
+        font-size: 25px;
+        font-weight: 600;
+    }
+}
+
+.tyc {    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 25px;
+    position: relative;
+    left: -22px;
+    margin-top: 20px;
+
+    input{
+        height: 20px;
+        width: 10%;
+        position: relative;
+        top: 9px;
+        background-color: rgb(209, 153, 11);
+    }
+
+}
+.boton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 
 
 
 @media screen and (max-width:768px){
 
     .logo{
-        border-bottom: 2px solid goldenrod;
+        border-bottom: 2px solid rgb(209, 153, 11);
+        display: flex;
+        justify-content: center;
     }
 
     .navegacion{
@@ -231,7 +350,7 @@
                 @include centrado();
                 padding-top: 45px;
                 padding-bottom: 45px;
-                border-bottom: 2px solid goldenrod;
+                border-bottom: 2px solid rgb(209, 153, 11);
 
                 a{      
                     font-size: 17px;                  
@@ -270,10 +389,16 @@
         @include centrado();
     }
 
-    
+    .noticia__hijo{
+        p{
+        font-size: 15px;
+        color: rgb(209, 153, 11);
+        }
+    }
 
-
-
+    .noticia__padre{
+        flex-direction:column;
+    }
 
     
     footer{
@@ -384,13 +509,11 @@
         justify-content: center;
         align-items: center;
         padding-left: 10px;
-    
     }
 
 
     .lineup{
-        border-top: 3px solid black;
-        
+        border-top: 3px solid black;        
     }
 
     .texto{
@@ -411,6 +534,26 @@
         }
     }
 
+    .noticia__hijo{
+        p{
+            font-size: 25px;
+
+        }
+    }
+
+    .noticia__padre{
+        flex-direction:column;
+    }
+
+    
+    .formulario{
+        margin-top: 40px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
     footer{
         grid-area: footer;
         display: grid;
@@ -489,7 +632,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: goldenrod;
+            color: rgb(209, 153, 11);
             margin-top: 10px;
             div{
                 @include centrado();
@@ -504,18 +647,48 @@
     .spotify{
         @include centrado();
         justify-content: flex-end;
+        
+    }
+
+
+}
+
+@media screen and (min-width:1200px){
+    .noticia__padre{
+        flex-direction: row;     
+    }
+    .dos, .cuatro, .seis{
+        position: relative;
+        top: 90px;
+    }
+
+    .main__novedades{
+        h2{
+            font-size: 40px;
+        }
+    }
+    
+    .cargar{
+        position: relative;
+        top: 50px;
+    }
+
+
+    .formulario{
+        width: 50%;
     }
 }
 
-@media screen and (min-width:2000px){
 
-}
 
 .navegador{    
     li{
         a{
             &:hover{
-                    text-decoration: underline goldenrod;
+                    
+                    font-family: 'Special Elite', cursive;
+                    letter-spacing: 2px;
+            
             }
         }
     }
@@ -527,9 +700,9 @@
     div{
         a{
             text-decoration: none;
-            color: goldenrod;
+            color: rgb(209, 153, 11);
             &:hover{
-                text-decoration: underline goldenrod;
+                text-decoration: underline rgb(209, 153, 11);
             }
         }
     }
@@ -540,7 +713,7 @@
     img{
         &:hover{
             opacity: .8;
-            border: 2px solid goldenrod;
+            border: 2px solid rgb(209, 153, 11);
         }
     }
 }
